@@ -41,9 +41,13 @@
 
 Cardio is a node.js module that tells you how long an async function took to run.
 
-Use it as a wrapper around an async function and you get the invocation time and arguments provided to your function within a callback. You can now use this information to plot graphs, create models based on different arguments provided, or simply make a note somewhere for analysis.
+Use it as a wrapper around an async function and you get the execution duration and arguments provided to your function within a callback. You can now use this information to plot graphs, create models based on different arguments provided, or simply make a note somewhere for analysis.
 
 Cardio works best in production environments where you may expect variance in execution time based on arguments provided, environmental overheads, or other real world parameters.
+
+[Cardio has zero dependencies on external libraries.](https://npm.anvaka.com/#/view/2d/cardio-node)
+
+[This allows Cardio to be stay under 15kB when packaged](https://packagephobia.com/result?p=cardio-node)
 
 ## Usage
 
@@ -102,16 +106,16 @@ The `cardioWrapper` method takes in the following arguments:
 
 | Argument            | Type                          | Description                                                                                  |
 | ------------------- | ----------------------------- | -------------------------------------------------------------------------------------------- |
-| `cardioName`        | `string`                      | A name for that function so that cardio and you can track it                                 |
-| `functionToMeasure` | async `function` or `Promise` | The function that you want to pass to cardio to measure and track                            |
-| `cardioCallback`    | `function`                    | A callback with the measurements recorded by cardio after your function has finished running |
+| `cardioName`        | `string`                      | A name for that function so that Cardio and you can track it                                 |
+| `functionToMeasure` | async `function` or `Promise` | The function that you want to pass to Cardio to measure and track                            |
+| `cardioCallback`    | `function`                    | A callback with the measurements recorded by Cardio after your function has finished running |
 
 `cardioCallback` gives you three arguments:
 
 | Argument     | Type     | Description                                                                                                           |
 | ------------ | -------- | --------------------------------------------------------------------------------------------------------------------- |
 | `cardioName` | `string` | The string you passed to `cardioWrapper()` for the function that has finished running                                 |
-| `invocation` | `Object` | The object created by cardio containing the metrics or measurements recorded                                          |
+| `invocation` | `Object` | The object created by Cardio containing the metrics or measurements recorded                                          |
 | `args`       | `Array`  | The arguments passed to your function for the current invocation. Useful for comparing invocations for pure functions |
 
 `invocation` object has the following fields:
