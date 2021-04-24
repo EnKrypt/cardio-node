@@ -7,8 +7,8 @@
  * In a real world app, instead of simulating a time delay, you would perform
  * actual operations that take time such as network calls or database lookups.
  *
- * Each handler is passed to or wrapped with `cardioWrapper()`.
- * `cardioWrapper()` takes in three arguments:
+ * Each handler is passed to or wrapped with `cardioWrapper`.
+ * `cardioWrapper` takes in three arguments:
  * 1. A name for that function so that cardio and you can track it.
  * 2. The function that you want to pass to cardio to measure and track.
  * 3. A callback with the measurements recorded by cardio after your function
