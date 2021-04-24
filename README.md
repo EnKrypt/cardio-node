@@ -45,9 +45,9 @@ Use it as a wrapper around an async function and you get the execution duration 
 
 Cardio works best in production environments where you may expect variance in execution time based on arguments provided, environmental overheads, or other real world parameters.
 
-[Cardio has zero dependencies on external libraries.](https://npm.anvaka.com/#/view/2d/cardio-node)
+[Cardio has zero dependencies on external libraries](https://npm.anvaka.com/#/view/2d/cardio-node)
 
-[This allows Cardio to be stay under 15kB when packaged](https://packagephobia.com/result?p=cardio-node)
+[This allows Cardio to stay under 15kB when packaged](https://packagephobia.com/result?p=cardio-node)
 
 ## Usage
 
