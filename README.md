@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="500" src="https://github.com/EnKrypt/cardio-node/raw/master/assets/Cardio.png">
+    <img width="500" src="https://github.com/EnKrypt/cardio-node/raw/master/assets/Cardio.png" />
 </p>
 
 <p align="center">
@@ -8,36 +8,59 @@
 
 <br>
 
-[![License](https://img.shields.io/npm/l/cardio-node)](https://raw.githubusercontent.com/EnKrypt/cardio-node/master/LICENSE)
-[![Install Size](https://packagephobia.com/badge?p=cardio-node)](https://packagephobia.com/result?p=cardio-node)
+<p align="center">
+    <a href="https://raw.githubusercontent.com/EnKrypt/cardio-node/master/LICENSE" title="License">
+        <img src="https://img.shields.io/npm/l/cardio-node" />
+    </a>
+    <a href="https://packagephobia.com/result?p=cardio-node" title="Install Size">
+        <img src="https://packagephobia.com/badge?p=cardio-node" />
+    </a>
+</p>
 
+<p align="center">
+    <a href="https://www.npmjs.com/package/cardio-node" title="cardio-node at npm">
+        <img src="https://github.com/EnKrypt/cardio-node/raw/master/assets/npm.svg" />
+    </a>
+    <a href="https://unpkg.com/cardio-node/" title="cardio-node at unpkg">
+        <img src="https://github.com/EnKrypt/cardio-node/raw/master/assets/unpkg.svg" />
+    </a>
+    <a href="https://cdn.jsdelivr.net/npm/cardio-node/" title="cardio-node at jsdelivr">
+        <img src="https://github.com/EnKrypt/cardio-node/raw/master/assets/jsdelivr.svg" />
+    </a>
+    <a href="https://libraries.io/npm/cardio-node" title="cardio-node at libraries.io">
+        <img src="https://github.com/EnKrypt/cardio-node/raw/master/assets/libraries-io.svg" />
+    </a>
+    <a href="https://npm.anvaka.com/#/view/2d/cardio-node" title="cardio-node at npmgraph">
+        <img src="https://github.com/EnKrypt/cardio-node/raw/master/assets/npmgraph.svg" />
+    </a>
+</p>
 ---
 
 ## What is Cardio?
 
 Cardio is a node.js module that tells you how long an async function took to run.
 
-You use it as a wrapper around an async function written by you and get the invocation time and arguments provided to your function within a callback. You can now use this information to plot graphs, or create models based on different arguments provided, or simply make a note somewhere for analysis.
+Use it as a wrapper around an async function and you get the invocation time and arguments provided to your function within a callback. You can now use this information to plot graphs, create models based on different arguments provided, or simply make a note somewhere for analysis.
 
 Cardio works best in production environments where you may expect variance in execution time based on arguments provided, environmental overheads, or other real world parameters.
 
 ## Usage
 
-Import `cardio-node`
+Import `cardio-node` by running `npm install cardio-node` or `yarn add cardio-node`
 
-Using require:
+Use the module in code using `require`:
 
 ```js
 const { cardioWrapper } = require('cardio-node');
 ```
 
-Using ES6 Imports:
+Or using ES6 Imports:
 
 ```js
 import { cardioWrapper } from 'cardio-node';
 ```
 
-Use `cardioWrapper` in your application. You can substitute the call to your async function with the call to what is returned by `cardioWrapper`:
+Wrap your async function using `cardioWrapper` in your application. You can substitute the call to your async function with the call to what is returned by `cardioWrapper`:
 
 ```js
 const countSheep = async (arg1, arg2) => {
@@ -99,7 +122,7 @@ The `cardioWrapper` method takes in the following arguments:
 
 ## Inspiration
 
-I was on vacation with a few friends and we found the gym closed in our hotel due to covid. It was 37C outside so going for a run was out of the question. Discussions around not getting any cardio done somehow eventually with discussions about code.
+I was on vacation with a few friends and we found the gym closed in our hotel due to covid. It was 37C outside so going for a run was out of the question. Discussions around not getting any cardio done somehow eventually mixed with discussions about code.
 
 Shoutout to [@tallpants](https://github.com/tallpants) and [@deusv0lt](https://github.com/deusv0lt) for brainstorming.
 
