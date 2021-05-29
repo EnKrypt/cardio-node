@@ -24,12 +24,13 @@
  */
 
 const fastify = require('fastify')({ ignoreTrailingSlash: true });
-const { cardioWrapper } = require('cardio-node');
 /*
- * If you've cloned this repo for local development, comment out the above
- * line and uncomment the line below. Make sure you've built once before.
+ * Make sure you've built once before.
+ * If you want to try this script out with a deployed version, install
+ * the `cardio-node` package and swap the two commented lines below
  */
-// const { cardioWrapper } = require('./dist');
+const { cardioWrapper } = require('./dist');
+// const { cardioWrapper } = require('cardio-node');
 
 fastify.get(
   '/a',
@@ -81,10 +82,10 @@ fastify.get(
 
 const start = async () => {
   try {
-    const fastifyListener = await fastify.listen(3000);
+    await fastify.listen(3000, '0.0.0.0');
     console.log('Running sample cardio application');
-    console.log(`Try hitting ${fastifyListener}/a?input=hello`);
-    console.log(`Or ${fastifyListener}/c?input=test`);
+    console.log(`Try hitting http://localhost:3000/a?input=hello`);
+    console.log(`Or http://localhost:3000/c?input=test`);
   } catch (err) {
     fastify.log.error(err);
     console.log(err);
